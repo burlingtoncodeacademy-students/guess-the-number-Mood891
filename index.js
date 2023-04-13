@@ -57,7 +57,7 @@ highRange = parseInt(highRange);
     guess = Math.floor((min + max) / 2);
     answer = await ask(`Is your number ${guess}? `);
     tries++;
-  } //the previous 'guess' and 'answer' on lines 34 & 35 are block-scoped and only accessible within the block of code where they are declared. in lines 54-56, I had it so they can be accessed anywhere in the code
+  } //the previous 'guess' and 'answer' on lines 34 & 35 are block-scoped and only accessible within the block of code where they are declared. in lines 57-58, I had it so they can be accessed anywhere in the code
 
   if (tries <= maxTries) {
     console.log(`I knew it! Your secret number is ${guess}. It took me ${tries} ${tries === 1 ? 'try' : 'tries'} to find it.`); //"victory message" + icebox "how many tries" section
