@@ -13,7 +13,7 @@ async function start() {
 console.log("Which game do you want to play?");
 
 let gameChoice = await ask("Enter '1' to play 'Guess the Number' or '2' to play 'Guess My Number': ");
-//icebox: choosing wich game to play
+//icebox: choosing which game to play
 if (gameChoice === "1") {
 console.log("Let's play a game where you make up a number and I try to guess it!");
 let highRange = await ask("Please enter the highest number for the range: "); //correlates with the Extend the Guess Range story in Github
@@ -57,7 +57,7 @@ highRange = parseInt(highRange);
     guess = Math.floor((min + max) / 2);
     answer = await ask(`Is your number ${guess}? `);
     tries++;
-  } //the previous 'guess' and 'answer' on lines 32 & 32 are block-scoped and only accessible within the block of code where they are declared. in lines 54-56, I had it so they can be accessed anywhere in the code
+  } //the previous 'guess' and 'answer' on lines 34 & 35 are block-scoped and only accessible within the block of code where they are declared. in lines 54-56, I had it so they can be accessed anywhere in the code
 
   if (tries <= maxTries) {
     console.log(`I knew it! Your secret number is ${guess}. It took me ${tries} ${tries === 1 ? 'try' : 'tries'} to find it.`); //"victory message" + icebox "how many tries" section
